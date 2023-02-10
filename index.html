@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>DAKAROLKPH | Ensaio Fotográfico</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Logomarca, Marca, Negócio, Empresa">
+        <meta name="author" content="Talles Suares">
+
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="presentation">
+                <h1>Vamos fazer um ensaio!!!</h1>
+                <p>DAKAROLKPH | Fotografias</p>
+                <div class="header-img">
+                    <img src="./images/profileAdjust.png" alt="Foto de Karoline Lima">
+                </div>
+                <h1>Olá, me chamo Karol!</h1>
+                <h3>Sou fotógrafa a mais de 12 anos e trabalho com ensaios femininos, onde o empoderamento e reconhecimento pessoal são os principais pontos abordados em meus ensaios.</h3>
+                <h3>Você pode não estar contente consigo mesma, não reconhecendo seu real valor, não está se enxergando como realmente é, e está acostumada a se ver pelo padrão adotado pela sociedade e vivendo um momento de comparação.</h3>
+                <h2>PARE COM ISSO AGORA</h2>
+                <h3>Vou te mostrar através dos meus olhos como você realmente é!</h3>
+                <h3>O que está adormecido hoje vai acordar!</h3>
+                <h2>Para iniciarmos, preciso que responda as perguntas abaixo:</h2>
+            </div>
+        </header>
+
+        <main>
+            <form action="https://formsubmit.co/k.limaalves1390@gmail.com" method="POST">
+                
+                <input type="hidden" name="_next" value="./thank.html">
+                <input type="hidden" name="_subject" value="Questionário | Ensaio Fotográfico">
+                <input type="hidden" name="_template" value="table">
+
+                <h2>Me informe seus dados para contato!</h2>
+                <div class="data-client">
+                    <label for="nome"></label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+        
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+        
+                    <label for="telefone"></label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone" required>
+                </div>
+                <h2>Vamos às perguntas...</h2>
+                <hr>
+                <label for="question1">1 - Você já fez algum ensaio?</label>
+        
+                <input type="radio" name="ensaio" id="question1Yes" value="yes" >
+                <label for="question1Yes">Sim</label>
+                <input type="radio" name="ensaio" id="question1No" value="no">
+                <label for="question1No">Não</label>
+                <hr>
+        
+                <div id="boxQ1" style="display: none;">
+                    <p>1.1 - O que achou do ensaio?</p>
+                    <textarea name="respostaDoEnsaio" id="question1IfYes" cols="100%" rows="10" style="resize: none;" required></textarea>
+                    <hr>
+                    <label for="question1-2">1.2 - O que mudou na sua vida após o ensaio?</label>
+                    <textarea name="mudancasAposEnsaio" id="question1-2" cols="100%" rows="10" style="resize: none;" required></textarea>
+                    <hr>
+                </div>
+                
+                <p>2 - Qual tipo de ensaio você tem mais interesse?</p>
+                <input type="radio" name="tipoEnsaio" id="ensaioCasual" value="Casual" required>
+                <label for="ensaioCasual">Ensaio Feminino Casual</label>
+                <input type="radio" name="tipoEnsaio" id="ensaioProfissional" value="Profissional" required>
+                <label for="ensaioProfissional">Ensaio Feminino Profissional</label>
+                <input type="radio" name="tipoEnsaio" id="ensaioSensual" value="Sensual" required>
+                <label for="ensaioSensual">Ensaio Feminino Sensual</label>
+                <input type="radio" name="tipoEnsaio" id="ensaioIntimista" value="Intimista" required>
+                <label for="ensaioTeste">Ensaio Feminino Intimista</label>
+                <hr>
+                <p>3 - O que não pode faltar no seu ensaio?</p>
+                <textarea name="naoPodeFaltar" id="question3" cols="100%" rows="10" style="resize: none;" required></textarea>
+                <hr>
+                <p>4 - O que você não deseja que aconteça no seu ensaio?</p>
+                <textarea name="naoPodeAcontecer" id="question4" cols="100%" rows="10" style="resize: none;" required></textarea>
+                <hr>
+                <p>5 - Tem algo em você que te incomoda? Se sim, o que por exemplo?</p>
+                <textarea name="incomoda" id="question5" cols="100%" rows="10" style="resize: none;" required></textarea>
+                <hr>
+                <p>6 - O que deseja transmitir com seu ensaio?</p>
+                <textarea name="oQueTransmitir" id="question6" cols="100%" rows="10" style="resize: none;" required></textarea>
+                <hr>
+                <p>7 - Você gostaria de ouvir músicas durante seu ensaio?</p>
+                <input type="radio" name="músicasNoEnsaio" id="question7Yes" value="sim"required>
+                <label for="question7Yes">Sim</label>
+                <input type="radio" name="músicasNoEnsaio" id="question7No" value="não" required>
+                <label for="question7No">Não</label>
+                <hr>
+        
+                <div id="boxQ7" style="display: none;">
+                    <p>7.1 - Quais músicas/estilos?</p>
+                    <input type="text" name="musicas" id="question7-1" placeholder="Digite o nome da música/estilo">
+                    <input type="button" class="addMusic btn" id="addMusic" value="+ Adicionar Música/Estilo">
+        
+                    <ul id="listaMusicas">
+                    </ul>
+                    
+                    <input type="button" onclick="deleteMusic()" class="deleteMusic btn" value="- Remover Última Música/Estilo">
+                    <hr>
+                </div>
+                
+                <p>8 - Para você, qual horário é melhor para realizarmos o ensaio?</p>
+                <input type="radio" name="ensaio" id="question8Yes" value="seg/sex" required>
+                <label for="question8Yes">SEG-SEX APÓS 18HRS</label>
+                <input type="radio" name="ensaio" id="question8No" value="sab/dom" required>
+                <label for="question8No">SAB/DOM A TARDE</label>
+                <hr>
+                <!--<p>9 - Deixe uma foto como referência de pose que gostaria de fazer no seu ensaio:</p>
+                
+                <label class="picture" for="pictureInput" tabIndex="0">
+                    <span class="pictureImage"></span>
+                    <input type="file" name="pictureInput" id="pictureInput">
+                </label>
+        
+                <span id="urlImage"></span>-->
+        
+                
+        
+                <input type="submit" value="Enviar respostas" class="button-default">
+            </form>
+        </main>
+
+        <footer>
+            <img src="./images/profile01.jpeg" alt="Logomarca Karol Photography">
+            <h3>Siga-me nas Redes Sociais:</h3>
+            <div class="contact">
+                <a href="https://instagram.com/dakarolkph?igshid=Zjc2ZTc4Nzk=" target="_blank"><img src="./images/instagramIcon.svg" alt="ícone do Instagram"></a>
+                <a href="https://www.tiktok.com/@dakarolkph?_t=8ZVs2cJFCI2&_r=1" target="_blank"><img src="./images/tiktokIcon.svg" alt="ícone do TikTok"></a>
+                <a href="https://www.facebook.com/profile.php?id=100069695315747&mibextid=LQQJ4d" target="_blank"><img src="./images/facebookIcon.svg" alt="ícone do Facebook"></a>
+                <a href="https://pin.it/9t0T8b1" target="_blank"><img src="./images/pinterestIcon.svg" alt="ícone do Pinterest"></a>
+            </div>
+        </footer>
+
+        <script src="./JS/script.js"></script>
+
+    </body>
+</html>
